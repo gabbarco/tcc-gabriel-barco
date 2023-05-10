@@ -5,7 +5,16 @@
 
 \section{INTRODUÇÃO}
 \label{sec:introdução}
-Inserir texto para Introdução
+Os serviços de diretório têm sido cada vez mais usado em todas as
+organizações do mundo, sejam faculdades, empresas, entre outras, essa
+grande requisição se deve ao fato de que em qualquer uma dessas é praticamente essencial centralizar a autenticação de usuários, com o objetivo de reduzir custos e facilitar a administração (Berbelini, G. 2020). Com esse aumento em sua necessidade, vários serviços como: Active Directory, OpenLDAP e Edirectory, vêm se destacando no mercado de trabalho.
+
+Estas ferramentas não se limitam apenas à autenticação de usuários, como também podem servir como suporte para a realização de atividades tais como nomeação, localização, segurança, entre outras relacionadas a gerir a infraestrutura de recursos nas organizações (Cruz, F., Almeida, G., Medeiros, R., Pereira, L., Braga, M., Diener R., 2004).
+
+Esses serviços surgiram mediante à necessidade de se ter um único diretório que possibilitasse ao usuário acessar todos os recursos da empresa com apenas uma única senha, o que não era antes feito, assim, funcionários de uma empresa por exemplo, possuíam várias delas para acessarem diferentes setores. Como a própria Microsoft define o Active Directory, "O  Active  Directory é  um  serviço  de  diretório  que  armazena  informações sobre objetos em rede e disponibiliza essas informações a usuários e administradores de rede (TECHNET.MICROSOFT.COM, 2015).”
+
+Com sua popularização, se tornou indispensável para qualquer organização, logo,  não demorou para que fossem criados serviços de código aberto, isto é, totalmente gratuito e para uso geral, o que se refere ao caso do OpenLDAP. "Comumente o AD é confundido como o concorrente do LDAP, o que não é o caso, porquê ele não é nada mais que um exemplo de um serviço de diretório que suporta LDAP (Bertolli, E. 2016)". LDAP então é o protocolo de serviços de diretório, ou seja, um meio para consultar os itens em qualquer um dos mesmos que o suportam.
+
 
 \subsection{TEMA}
 \label{subsec:tema}
@@ -14,7 +23,9 @@ Inserir texto para Tema
 
 \subsection{PROBLEMA}
 \label{subsec:problema}
-Inserir texto para Problema
+Uma realidade quando se trata de redes de grande porte, mas no caso de empresas pequenas, as mesmas preferem por não implementar essas ferramentas, muitas vezes pelo desconhecimento das suas funcionalidades como também da falta de investimento para esse tipo de sistema. No segundo caso esse problema se deve ao fato do sistema de diretório mais reconhecido seja o Microsoft Active Directory, que exige licença, chamadas CAL's, quando se trata da administração remota em um servidor.
+
+Esse problema coloca como necessidade a existência de ferramentas de código aberto, como o OpenLDAP, que será estudado nesse trabalho como uma alternativa ao AD, que se torna completamente inviável para redes de pequeno porte, quando é vista a falta de recursos para a alocação desse tipo de sistema.
 
 
 \subsection{OBJETIVO GERAL}
@@ -30,8 +41,9 @@ O presente projeto apresenta os seguintes objetivos específicos:
 
 \subsection{JUSTIFICATIVA}
 \label{subsec:justificativa}
-Inserir texto para justificativa
+Esse trabalho foi pensado com a premissa da satisfazer uma necessidade do PET Computação IFTM Campus Ituiutaba, visto que com o crescimento no número de alunos do projeto, vêm ficando cada vez maior a necessidade de se criar um gerenciamento da autenticação dos próprios nas máquinas, e como foi citado no problema, o OpenLDAP se tornou o meio viável para essa tarefa. Sua instalação vai permitir aos participantes maior segurança no uso dos computadores e também vai possibilitar que possam ter logins de usuário com suas informações em qualquer máquina da rede.
 
+Também serão consideradas as necessidades do gerenciamento de recursos em meio ao servidor, visto que a catalogação em meio a LDAP tende a garantir uma maior garantia dos mesmos.
 
 \subsection{DELIMITAÇÃO}
 \label{subsec:delimitação}
