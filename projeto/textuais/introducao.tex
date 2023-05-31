@@ -7,7 +7,7 @@
 \label{sec:introdução}
 Os serviços de diretório têm sido cada vez mais utilizado em todas as
 organizações do mundo, sejam faculdades, empresas, entre outras. Essa
-grande demanda se deve ao fato de que em qualquer uma dessas é praticamente essencial centralizar a autenticação de usuários, com o objetivo de reduzir custos e facilitar a administração \cite{berbelini}. Com esse aumento em sua necessidade, vários serviços como: Active Directory (AD), OpenLDAP e Edirectory, vêm se destacando no mercado.
+grande demanda se deve ao fato de que em qualquer uma dessas é praticamente essencial centralizar a autenticação de usuários, com o objetivo de reduzir custos e facilitar a administração \cite{berbelini}. Com esse aumento em sua necessidade, vários serviços como Active Directory (AD), OpenLDAP e Edirectory, vêm se destacando no mercado.
 
 Estas ferramentas não se limitam apenas à autenticação de usuários, como também podem servir como suporte para a realização de atividades tais como nomeação, localização, segurança, entre outras relacionadas a gerir a infraestrutura de recursos nas organizações \cite{cruz2023}.
 
@@ -25,9 +25,9 @@ A instalação e configuração adequadas do OpenLDAP em um ambiente ProxMox pos
 
 \subsection{PROBLEMA}
 \label{subsec:problema}
-Os serviços de diretório são uma realidade concreta em organizações com redes de grande porte. Contudo, em pequenas empresas, o uso não é tão disseminado, por vezes por desconhecimento de tal tecnologia ou mesmo falta de investimento em profissionais e equipamentos para operacionalizar essas funcionalidades. No segundo caso, esse problema se deve ao fato de que o sistema de diretório mais conhecido é o Microsoft Active Directory, que segundo a 6SENSE, "tem participação de mercado de 29,53\% no mercado de gerenciamento de identidade e acesso. O AD compete com 165 ferramentas concorrentes na categoria de gerenciamento de identidade e acesso" \cite{6sense}, esse que exige a compra de uma licença, quando se trata da administração remota em um servidor.
+Os serviços de diretório são uma realidade concreta em organizações com redes de grande porte. Contudo, em pequenas empresas, o uso não é tão disseminado, por vezes por desconhecimento de tal tecnologia ou mesmo falta de investimento em profissionais e equipamentos para operacionalizar essas funcionalidades. No segundo caso, esse problema se deve ao fato de que o sistema de diretório mais conhecido é o Microsoft Active Directory, que segundo a 6SENSE, "tem participação de 29,53\% no mercado de gerenciamento de identidade e acesso. O AD compete com 165 ferramentas na categoria de gerenciamento de identidade e acesso" \cite{6sense}, esse que exige a compra de uma licença, quando se trata da administração remota em um servidor.
 
-Esse fato abre espaço para a existência de ferramentas de código aberto, como o OpenLDAP, que será estudado nesse trabalho como uma alternativa ao AD, que se torna completamente desafiador para redes de pequeno porte, quando é vista a falta de recursos financeiros para a alocação desse tipo de sistema.
+Esse fato abre espaço para a existência de ferramentas de código aberto, como o OpenLDAP, que será estudado nesse trabalho como uma alternativa ao AD, que se torna desafiador para redes de pequeno porte, quando é vista a falta de recursos financeiros para a alocação desse tipo de sistema.
 
 
 \subsection{OBJETIVO GERAL}
@@ -44,16 +44,13 @@ O presente projeto apresenta os seguintes objetivos específicos:
     \item Pesquisar e compreender os conceitos fundamentais do OpenLDAP, incluindo sua estrutura, protocolos e recursos de segurança.
     \item Realizar a instalação do OpenLDAP em meio ao servidor já configurado.
     \item Configurar o OpenLDAP para autenticação de usuários e grupos no servidor ProxMox, estabelecendo políticas de acesso e permissões adequadas.
-    \item Integrar o OpenLDAP com o sistema de gerenciamento de recursos do servidor ProxMox, permitindo o controle e monitoramento centralizado de recursos como armazenamento, processamento e rede.
     \item Realizar testes e validação da instalação e configuração do OpenLDAP, verificando a correta autenticação de usuários e a gestão eficiente dos recursos no servidor ProxMox.
     \item Documentar todo o processo de instalação e configuração do OpenLDAP no servidor ProxMox, fornecendo um guia passo a passo para auxiliar outros administradores de sistemas na implementação dessa solução.
 \end{itemize}
 
 \subsection{JUSTIFICATIVA}
 \label{subsec:justificativa}
-Esse trabalho foi pensado com a premissa de satisfazer uma necessidade do PET Computação IFTM Campus Ituiutaba, visto que com o crescimento no número de membros do programa, vêm crescendo cada vez mais a necessidade de se criar um gerenciamento do processo de autenticação nas máquinas. Considerando o que já foi relatado na seção que trata do problema alvo deste trabalho, o OpenLDAP se tornou uma alternativa a ser avaliada para essa tarefa. Espera-se que a implementação da solução proposta irá permitir aos participantes maior segurança no uso dos computadores e também irá possibilitar que possam ter logins de usuário com suas informações em qualquer máquina da rede.
-
-Além disso, serão consideradas as necessidades do gerenciamento de recursos dentro do servidor. Visto que, ao catalogar e organizar as informações deles no diretório LDAP, é possível obter uma maior garantia da integridade e disponibilidade dos mesmos.
+Esse trabalho foi pensado com a premissa de satisfazer uma necessidade do PET Computação IFTM Campus Ituiutaba, visto que com o crescimento no número de membros do programa, percebe-se um aumento na demanda por um gerenciamento do processo de autenticação nas máquinas. Considerando o que já foi relatado na seção \ref{subsec:problema}, que trata do problema alvo deste trabalho, o OpenLDAP se tornou uma alternativa a ser avaliada para essa tarefa. Espera-se que a implementação da solução proposta irá permitir aos participantes maior segurança no uso dos computadores bem como o uso de logins de usuário, com suas informações em qualquer máquina da rede.
 
 \subsection{DELIMITAÇÃO}
 \label{subsec:delimitação}
