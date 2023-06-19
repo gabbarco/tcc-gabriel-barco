@@ -3,11 +3,11 @@
 %\thispagestyle{empty}
 %\pagenumbering{arabic}
 
-\section{SERVIÇO DE DIRETÓRIO}
+\section{SERVIÇOS}
 \label{sec:referencial-teórico}
 Os serviços de diretório desempenham um papel crucial na gestão de identidades e no controle de acesso em ambientes de rede. Estes serviços são projetados para armazenar, organizar e recuperar informações sobre usuários, grupos, recursos e outras entidades em uma rede. Eles fornecem uma estrutura hierárquica que permite o acesso e a busca eficientes dos dados, seguindo o modelo de árvore, onde cada nó representa uma entrada ou objeto.
 
-Atualmente, existem várias soluções de diretório disponíveis, cada uma com características e funcionalidades distintas. Nesta seção, será demonstrado o estado da arte atual desses serviços, com foco no Lightweight Directory Access Protocol (LDAP), que se baseia no padrão X.500, um protocolo pesado, que opera sobre a pilha completa de protocolos OSI e requer uma quantidade significativa de recursos computacionais. O LDAP é projetado para operar sobre TCP/IP e fornece a maioria das funcionalidades do X.500 com um custo muito menor, pois não precisa rodar na pilha de sete camadas OSI \cite{machado2020}.
+Atualmente, existem várias soluções de diretório disponíveis, cada uma com características e funcionalidades distintas. Nesta seção, será demonstrado o estado da arte atual desses serviços, com foco no Lightweight Directory Access Protocol (LDAP), que se baseia no padrão X.500, um protocolo pesado, que opera sobre a pilha completa de protocolos OSI e requer uma quantidade significativa de recursos computacionais.
 
 \begin{figure}[h]
     \centering
@@ -15,6 +15,8 @@ Atualmente, existem várias soluções de diretório disponíveis, cada uma com 
 	\caption[X.500 sobre OSI vs. LDAP sobre TCP/IP-]{X.500 sobre OSI vs. LDAP sobre TCP/IP \cite{machado2020}.
 	\label{fig:camadaX.500Ldap}}
 \end{figure}
+
+Como ilustrado na figura \ref{fig:camadaX.500Ldap}, o LDAP é projetado para operar sobre TCP/IP e fornece a maioria das funcionalidades do X.500 com um custo muito menor, pois não precisa rodar na pilha de sete camadas OSI \cite{machado2020}.
 
 \subsection{LIGHTWEIGHT DIRECTORY ACCESS PROTOCOL (LDAP)}
 
@@ -137,9 +139,9 @@ a seguinte sintaxe \cite{oliveira2010}:
 
 A conexão do OpenLDAP com outros servidores pode ser estabelecida para diversos propósitos, como autenticação centralizada, gerenciamento de usuários e controle de acesso. O OpenLDAP é uma solução de diretório LDAP genérica e flexível, o que permite sua integração com diferentes tipos de servidores.
 
-Se conectando com o ProxMox, que será explicado na seção a seguir, é possível integrar o processo de autenticação dos usuários, permitindo que eles usem suas credenciais do diretório LDAP para acessar o servidor.
+Se conectando com o Proxmox, que será explicado na seção a seguir, é possível integrar o processo de autenticação dos usuários, permitindo que eles usem suas credenciais do diretório LDAP para acessar o servidor.
 
-\subsection{PROXMOX}
+\section{SERVIDOR}
 
 O Proxmox é uma plataforma de virtualização de servidores de código aberto baseada no kernel do Linux. Ele combina tecnologias de virtualização de contêineres (LXC), e máquinas virtuais (KVM), para fornecer uma solução completa de virtualização para data centers e ambientes empresariais.
 

@@ -5,4 +5,16 @@
 
 \section{METODOLOGIA}
 \label{sec:metodologia}
-Inserir texto para metodologia
+O desenvolvimento do projeto proposto demanda o estudo e desenvolvimento de um método para a instalação e configuração do OpenLDAP em um servidor ProxMox VE na versão 7.4.  Para isso, serão seguidas as etapas recomendadas para garantir uma implementação adequada e funcional.
+
+Para a instalação do ProxMox, é recomendado o uso de hardware compatível com os requisitos mínimos. São eles: um processador de 64 bits com suporte a virtualização (Intel VT-x ou AMD-V), memória RAM de 2 GB para o sistema operacional e serviços Proxmox VE, um disco rígido com pelo menos 32 GB de espaço disponível e uma conexão de rede estável \cite{proxmox-requirements}.
+
+Os requisitos de hardware independem da instalação do OpenLDAP, pois ele é um serviço de diretório leve que pode ser executado em hardware modesto. No entanto, é importante notar que o desempenho do OpenLDAP pode ser afetado pelo hardware subjacente, portanto, é recomendável usar hardware de alta qualidade para obter o melhor desempenho.
+
+Após verificada a compatibilidade do hardware com a versão específica do ProxMox, será seguido o procedimento de instalação padrão do ProxMox VE 7.4, que inclui o download da imagem ISO, criação de uma mídia de instalação (DVD ou USB), inicialização do servidor a partir da mídia e execução do assistente de instalação. Serão fornecidas as informações necessárias, como configuração de rede, senhas de acesso e seleção do disco para uma instalação eficiente.
+
+Quanto a configuração de rede, deve-se garantir conectividade adequada do servidor. Serão atribuídos endereços IP, máscaras de sub-rede e gateway padrão para as interfaces de rede do ProxMox, de acordo com a topologia e requisitos da rede local.
+
+Em seguida, com base nos estudos realizados, será feita a instalação do OpenLDAP no servidor. Após a instalação ser concluída, serão realizadas as configurações necessárias para o correto funcionamento do serviço de diretórios, incluindo definição de políticas de segurança, criação de usuários e grupos, e implementação de permissões de acesso. Além disso, serão realizados testes para a validação de cada funcionalidade adicionada.
+
+Por fim, será elaborado um artigo científico descrevendo todo o desenvolvimento para a instalação e configuração propostas. O artigo incluirá também os resultados obtidos, as dificuldades encontradas e as conclusões alcançadas durante o processo de implementação.
