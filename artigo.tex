@@ -1,0 +1,95 @@
+\documentclass[12pt]{article}
+
+\usepackage[T1]{fontenc} %pacote que permite a hifenização de palavras acentuadas
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage{graphicx} %pacote para inserir figuras
+\usepackage{subcaption} % pacote para inserir subfiguras
+\usepackage{geometry} %pacote que pertmite dimensionar a página
+\usepackage{setspace} %pacote que pertmite alterar epaçamento entre linhas
+\usepackage{listings} %pacote que simula uma linha de código
+\usepackage{indentfirst} %indentação de parágrafos
+\usepackage{times} %fonte Times New Roman
+\usepackage{sectsty} %pacote que pertmite alterar o estilo de seções e sub-seções
+
+\usepackage[hyphens]{url}	% Permite a quebra de linha nos hyfens das urls
+\usepackage[pdftex,         % Este pacote cria hiperlinks
+bookmarks=true,
+bookmarksnumbered=true]{hyperref}
+\hypersetup{
+	colorlinks,						%Configura como o link é apresentado
+	citecolor=black,				%Configura a cor das citações
+	filecolor=black,				%Configura a cor dos arquivos
+	linkcolor=black,				%Configura a cor de links internos
+	urlcolor=black,					%Configura a cor de links externos
+	pdfauthor = {Gabriel Barco e Saulo da Mata},	%Information about the document
+	pdftitle = {Gabriel Barco - Artigo}
+}
+
+% Este pacote deve vir depois do pacote hyperref
+\usepackage[alf]{abntex2cite} %pacote de estilos bibliográficos da abnt, [alf] ou [num]
+
+\usepackage{bold-extra}
+
+% Defina um novo comando para negrito
+\newcommand{\mybold}[1]{\textbf{#1}}
+
+\usepackage{DejaVuSansMono} % Certifique-se de que a fonte está instalada
+\lstset{
+    language=sh, % Define o idioma como shell
+    basicstyle=\fontfamily{DejaVuSansMono-TLF}\selectfont\small, % Use a fonte DejaVu Sans Mono
+    breaklines=true, % Permite que o código quebre linhas automaticamente
+    captionpos=b, % Posição da legenda (no fundo)
+    frame=shadowbox, % Adiciona uma moldura ao redor do código
+    showstringspaces=false, % Não mostrar espaços em strings
+    keywordstyle=\color{blue}, % Estilo das palavras-chave
+    morekeywords={}, % Adicione \textbf como palavra-chave personalizada
+    keywordstyle=\textbf,   % Aplique negrito como estilo para palavras-chave personalizadas
+    numbers=left, % Adiciona números de linha à esquerda
+    numberstyle=\tiny, % Estilo dos números de linha
+    stepnumber=1, % Incremento dos números de linha
+    showstringspaces=false, % Não mostrar espaços em strings
+    escapechar= `,
+    stringstyle=\color{black}, % Estilo das strings
+}
+
+
+%margens
+\geometry{a4paper,left=3cm,top=3cm,right=2cm,bottom=2cm}
+
+%espaçamento
+\setstretch{1.5}
+
+%tamanho dos títulos das seções e sub-seções
+\sectionfont{\fontsize{14}{15}\selectfont}
+\subsectionfont{\fontsize{12}{15}\selectfont}
+
+% manualmente corrigindo a hifenização de certas palavras
+\hyphenation{I-no-va-ções Im-ple-men-ta-ção Mag-ya-ri}
+
+\begin{document}
+\input pre-textuais/titulo-e-nome
+\input pre-textuais/resumo
+\input pre-textuais/titulo-lingua-estr
+\input pre-textuais/abstract
+
+\newpage
+\tableofcontents
+\thispagestyle{empty}
+
+\newpage
+\input textuais/introducao
+\input textuais/referencial-teorico
+\input textuais/material-e-metodos
+\input textuais/servidoropenldap
+\input textuais/clienteopenldap
+\input textuais/resultados-e-discussao
+\input textuais/conclusao
+
+%Referências
+\newpage
+\addcontentsline{toc}{section}{REFERÊNCIAS}
+\renewcommand{\refname}{REFERÊNCIAS}
+\bibliography{pos-textuais/artigo}
+
+\end{document}
